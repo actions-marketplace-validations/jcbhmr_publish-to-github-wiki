@@ -1,0 +1,22 @@
+name: Deploy to GitHub wiki
+description: 📖 GitHub Action to deploy to a GitHub wiki
+author: Jacob Hummer
+inputs:
+  path:
+    description:
+      Path to the wiki folder with Markdown files in it. Usually this is
+      something like "wiki" or "docs". Defaults to "wiki".
+    required: true
+    default: wiki
+outputs:
+  page_url:
+    description: Deployed wiki URL.
+runs:
+  using: composite
+  steps:
+    - run: $GITHUB_ACTION_PATH/src/gh-action.sh
+      shell: bash
+      # https://github.com/actions/runner/issues/665
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+        INPUT_PATH: ${{ inputs.path }}
