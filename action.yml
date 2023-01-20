@@ -1,4 +1,4 @@
-name: Publish to GitHub wiki
+name: jcbhmr/publish-to-github-wiki
 description: 📖 GitHub Action to sync a folder to the GitHub wiki
 author: Jacob Hummer
 branding:
