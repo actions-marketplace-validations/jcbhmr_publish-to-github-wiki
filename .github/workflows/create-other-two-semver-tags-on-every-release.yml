@@ -2,7 +2,8 @@ name: Create other two semver tags on every release
 on:
   # TESTING ONLY
   workflow_dispatch:
-  release: published
+  release:
+    types: [published]
 jobs:
   create-other-two-semver-tags-on-every-release:
     runs-on: ubuntu-latest
