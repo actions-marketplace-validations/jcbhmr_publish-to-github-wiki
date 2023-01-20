@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-git remote add github-wiki "https://$GITHUB_ACTOR@github.com/$GITHUB_REPOSITORY/wiki.git"
+git remote add github-wiki "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY/wiki.git"
 ref="$(git subtree split -P "$INPUT_PATH")"
 git push -f github-wiki "$ref:master"
 
