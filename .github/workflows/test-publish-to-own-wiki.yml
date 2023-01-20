@@ -2,7 +2,7 @@ name: Test publish to own wiki
 on:
   push:
     paths: [src/**, action.yml, .github/workflows/test-publish-to-own-wiki.yml]
-concurrency: test-publish-to-own-wiki-${{ github.ref }}
+concurrency: test-publish-to-own-wiki
 jobs:
   test-publish-to-own-wiki:
     runs-on: ubuntu-latest
