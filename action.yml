@@ -1,6 +1,9 @@
 name: Deploy to GitHub wiki
 description: 📖 GitHub Action to deploy to a GitHub wiki
 author: Jacob Hummer
+branding:
+  icon: book-open
+  color: blue
 inputs:
   path:
     description:
