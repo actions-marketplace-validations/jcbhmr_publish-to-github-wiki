@@ -12,5 +12,6 @@ jobs:
       - run: |
           mkdir wiki
           echo "$GITHUB_WORKFLOW" > wiki/Test.md
+          git add wiki
           git commit --amend --no-edit
       - uses: ./
