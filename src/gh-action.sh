@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-git remote add github-wiki "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY/wiki.git"
+git remote add github-wiki "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.wiki.git"
 ref="$(git subtree split -P "$INPUT_PATH")"
 git push -f github-wiki "$ref:master"
 
@@ -10,4 +10,4 @@ git push -f github-wiki "$ref:master"
 #
 # https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs
 # Example: echo "test=world" >> $GITHUB_OUTPUT
-echo "page_url=https://github.com/$GITHUB_REPOSITORY/wiki" >> $GITHUB_OUTPUT
+echo "page_url=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/wiki" >> $GITHUB_OUTPUT
