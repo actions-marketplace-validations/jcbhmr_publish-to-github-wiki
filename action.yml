@@ -1,5 +1,5 @@
-name: Deploy to GitHub wiki
-description: 📖 GitHub Action to deploy to a GitHub wiki
+name: Publish to GitHub wiki
+description: 📖 GitHub Action to sync a folder to the GitHub wiki
 author: Jacob Hummer
 branding:
   icon: book-open
