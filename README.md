@@ -37,7 +37,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: publish-to-github-wiki
-        uses: jcbhmr/publish-to-github-wiki@v1
+        uses: jcbhmr/publish-to-github-wiki@v2
 ```
 
 <!--
