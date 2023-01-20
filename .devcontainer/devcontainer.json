@@ -1,0 +1,14 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base",
+  "features": {
+    "ghcr.io/dhoeric/features/act": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "lizebang.bash-extension-pack",
+        "cschleiden.vscode-github-actions"
+      ]
+    }
+  }
+}
