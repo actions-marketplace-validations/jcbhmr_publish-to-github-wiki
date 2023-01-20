@@ -1,0 +1,21 @@
+name: Create other two semver tags on every release
+on:
+  # TESTING ONLY
+  workflow_dispatch:
+  release: published
+jobs:
+  create-other-two-semver-tags-on-every-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          version_full="$(git describe)"
+          version_parts=( ${version_full//./ })
+
+          version_major="$version_parts[0]"
+          version_minor="$version_parts[0].$version_parts[1]"
+
+          git tag "$version_minor"
+          git tag "$version_major"
+
+          git tag
