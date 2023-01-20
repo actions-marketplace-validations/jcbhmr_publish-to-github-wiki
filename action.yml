@@ -10,11 +10,14 @@ inputs:
     default: wiki
 outputs:
   page_url:
-    description: Deployed wiki URL.
+    description: Deployed wiki URL. Links to GitHub wiki homepage.
+    value: ${{ steps.gh-action.outputs.page_url }}
 runs:
   using: composite
   steps:
-    - run: $GITHUB_ACTION_PATH/src/gh-action.sh
+    - id: gh-action
+      run: |
+        "$GITHUB_ACTION_PATH/src/gh-action.sh"
       shell: bash
       # https://github.com/actions/runner/issues/665
       env:
