@@ -106,5 +106,33 @@ The way this project is tested is directly on this repository. The
 <kbd>Wiki</kbd> tab on this repository is completely nonsensical and is there
 only to test this action on itself.
 
+### Creating a new release
+
+Right now the release process is manual. Here are the steps:
+
+1. Create a semver GitHub Release: v1.2.3
+2. Mutate/create the minor tag to point to the new release: v1.2
+3. Mutate/create the major tag to point to the new release: v1
+3. `git push --tags`
+
+We end up with tags like this:
+
+```
+# Patch tags
+v1.0.0
+v1.0.1
+v1.1.0
+v2.0.0
+
+# Minor tags
+v1.0 => v1.0.1
+v1.1 => v1.1.0
+v2.0 => v2.0.0
+
+# Major tags
+v1 => v1.1.0
+v2 => v2.0.0
+```
+
 [github.dev]: https://github.com/github/dev
 [`act`]: https://github.com/nektos/act#readme
