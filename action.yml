@@ -10,7 +10,7 @@ inputs:
     default: wiki
 outputs:
   page_url:
-    description: Deployed wiki URL. Links to GitHub wiki homepage.
+    description: Deployed wiki URL. Links to GitHub wiki Home page.
     value: ${{ steps.gh-action.outputs.page_url }}
 runs:
   using: composite
